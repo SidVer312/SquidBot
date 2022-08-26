@@ -14,7 +14,7 @@ jokes = ("/home/runner/Icebears-Test-Bot/jokes/")
 intents = discord.Intents.default()
 intents.members = True
 
-tanishq_jokes = ("4lyxcj.jpg" , "5ziwkl.jpg" , "5ztzne.jpg" , "5zwt68.jpg" , "smarter.png" , "5zxn7o.jpg" , "walmart_car.png" , "windows.png" , "astro.png" , "orange.png" , "Siri_lanka.png" , "slep.png" , "sold.png" , "5zz0iz.jpg" , "toilet.png" , "wifi.png" , "6004d7.jpg" , "putin.png" , "david.png" , "604ajn.jpg" , "knife.png" , "60539m.jpg" , "609wg5.jpg" , "60djj2.jpg" , "60e3he.jpg" , "60e8z7.jpg" , "60fd9c.jpg")
+chatty_jokes = ("4lyxcj.jpg" , "5ziwkl.jpg" , "5ztzne.jpg" , "5zwt68.jpg" , "smarter.png" , "5zxn7o.jpg" , "walmart_car.png" , "windows.png" , "astro.png" , "orange.png" , "Siri_lanka.png" , "slep.png" , "sold.png" , "5zz0iz.jpg" , "toilet.png" , "wifi.png" , "6004d7.jpg" , "putin.png" , "david.png" , "604ajn.jpg" , "knife.png" , "60539m.jpg" , "609wg5.jpg" , "60djj2.jpg" , "60e3he.jpg" , "60e8z7.jpg" , "60fd9c.jpg")
 
 client = discord.Client(intents=intents)
 
@@ -81,9 +81,9 @@ async def on_message(message):
         await message.channel.send(file=discord.File(file_like_object, filename=file_name))  
 
     if message.content.lower().startswith(f"{CommandKey}meme") or message.content.lower().startswith(f"{CommandKey}jokes") or message.content.lower().startswith(f"{CommandKey}joke"):
-      await message.channel.send(file=discord.File(jokes + (random.choice(tanishq_jokes))))
+      await message.channel.send(file=discord.File(jokes + (random.choice(chatty_jokes))))
 
-    if "icebear" in message.content.lower() or "siddhartha" in message.content.lower() or "bear" in message.content.lower() or "sid" in message.content.lower():
+    if "siddhartha" in message.content.lower() or "sid" in message.content.lower():
       if "side" in message.content.lower():
         pass
       else:
